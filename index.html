@@ -3,23 +3,282 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AC Doce</title>
+
+<title>AC Doce | Doces Artesanais</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:'Arial',sans-serif;
+background:#fff8f3;
+color:#4a2a20;
+}
+
+header{
+background:linear-gradient(135deg,#7b3f61,#c88a9b);
+color:white;
+text-align:center;
+padding:35px 20px;
+}
+
+.logo{
+width:130px;
+height:130px;
+background:white;
+border-radius:50%;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+color:#7b3f61;
+font-weight:bold;
+}
+
+header h1{
+font-size:36px;
+margin:15px 0 5px;
+}
+
+header p{
+font-size:18px;
+}
+
+
+.menu{
+padding:20px;
+max-width:600px;
+margin:auto;
+}
+
+
+.titulo{
+text-align:center;
+font-size:28px;
+margin:20px;
+}
+
+
+.produto{
+
+background:white;
+border-radius:20px;
+padding:20px;
+margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+
+.produto h2{
+color:#7b3f61;
+}
+
+
+.preco{
+
+font-size:22px;
+font-weight:bold;
+color:#c0392b;
+
+}
+
+
+button{
+
+background:#25d366;
+color:white;
+border:none;
+width:100%;
+padding:15px;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+
+}
+
+
+.sobre{
+
+background:#7b3f61;
+color:white;
+padding:25px;
+text-align:center;
+
+}
+
+
+footer{
+
+text-align:center;
+padding:20px;
+font-size:14px;
+
+}
+
+</style>
+
 </head>
 
-<body style="font-family:Arial;background:#fff5f8;text-align:center;padding:40px;">
 
-<h1 style="color:#d63384;">🍰 AC Doce</h1>
+<body>
 
-<p>Bem-vindo ao nosso cardápio.</p>
 
-<h2>Bolo de Pote</h2>
-<p>R$ 12,00</p>
+<header>
 
-<a href="https://wa.me/5521974381225">
-<button style="background:#25D366;color:white;padding:15px;border:none;border-radius:10px;font-size:18px;cursor:pointer;">
-Pedir pelo WhatsApp
+<div class="logo">
+AC
+</div>
+
+<h1>AC Doce</h1>
+
+<p>Doces artesanais feitos com amor ❤️</p>
+
+</header>
+
+
+<h2 class="titulo">
+Nosso Cardápio 🍰
+</h2>
+
+
+<div class="menu">
+
+
+<div class="produto">
+
+<h2>🍫 Pavê Premium</h2>
+
+<p>
+Recheio cremoso de chocolate branco
+com finalização de chocolate meio amargo.
+</p>
+
+<div class="preco">
+R$ 10,00
+</div>
+
+<br>
+
+<button onclick="pedido('Pavê Premium')">
+Pedir agora
 </button>
-</a>
+
+</div>
+
+
+
+<div class="produto">
+
+<h2>🍮 Pudim Tradicional</h2>
+
+<p>
+Pudim artesanal, cremoso e irresistível.
+</p>
+
+<div class="preco">
+R$ 6,00
+</div>
+
+<br>
+
+<button onclick="pedido('Pudim')">
+Pedir agora
+</button>
+
+</div>
+
+
+
+<div class="produto">
+
+<h2>🥤 Açaí</h2>
+
+<p>
+Monte seu açaí com deliciosos complementos.
+</p>
+
+<div class="preco">
+Consultar sabores
+</div>
+
+<br>
+
+<button onclick="pedido('Açaí')">
+Pedir agora
+</button>
+
+</div>
+
+
+
+<div class="produto">
+
+<h2>🍪 Cookies Artesanais</h2>
+
+<p>
+Cookies feitos com ingredientes selecionados.
+</p>
+
+<div class="preco">
+R$ 8,00
+</div>
+
+<br>
+
+<button onclick="pedido('Cookies')">
+Pedir agora
+</button>
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="sobre">
+
+<h2>AC Doce</h2>
+
+<p>
+Pequenos momentos ficam mais doces com nossos produtos.
+</p>
+
+</div>
+
+
+<footer>
+
+© AC Doce - Encomendas pelo WhatsApp
+
+</footer>
+
+
+
+<script>
+
+function pedido(produto){
+
+let telefone="5521974381225";
+
+let texto="Olá AC Doce! Gostaria de pedir: "+produto;
+
+window.open(
+"https://wa.me/"+telefone+"?text="+encodeURIComponent(texto)
+);
+
+}
+
+</script>
+
 
 </body>
+
 </html>
