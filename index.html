@@ -3,23 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AC Doce</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#fff6fb;
+}
+
+header{
+background:#ff4fa0;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+header h1{
+font-size:38px;
+}
+
+header p{
+margin-top:10px;
+font-size:18px;
+}
+
+nav{
+display:flex;
+overflow:auto;
+background:white;
+padding:15px;
+gap:10px;
+position:sticky;
+top:0;
+}
+
+nav a{
+text-decoration:none;
+background:#ff4fa0;
+color:white;
+padding:10px 18px;
+border-radius:30px;
+white-space:nowrap;
+}
+
+section{
+padding:25px;
+}
+
+h2{
+color:#ff4fa0;
+margin-bottom:20px;
+}
+
+.produto{
+background:white;
+padding:15px;
+margin-bottom:20px;
+border-radius:18px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.produto img{
+width:100%;
+border-radius:15px;
+}
+
+.produto h3{
+margin-top:15px;
+}
+
+.preco{
+color:#ff4fa0;
+font-size:22px;
+font-weight:bold;
+margin:10px 0;
+}
+
+.botao{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#777;
+}
+
+</style>
+
 </head>
 
-<body style="font-family:Arial;background:#fff5f8;text-align:center;padding:40px;">
+<body>
 
-<h1 style="color:#d63384;">🍰 AC Doce</h1>
+<header>
 
-<p>Bem-vindo ao nosso cardápio.</p>
+<h1>🍰 AC Doce</h1>
 
-<h2>Bolo de Pote</h2>
-<p>R$ 12,00</p>
+<p>Doces • Salgados • Açaí • Bebidas</p>
 
-<a href="https://wa.me/5521974381225">
-<button style="background:#25D366;color:white;padding:15px;border:none;border-radius:10px;font-size:18px;cursor:pointer;">
-Pedir pelo WhatsApp
-</button>
+</header>
+
+<nav>
+
+<a href="#doces">Doces</a>
+
+<a href="#salgados">Salgados</a>
+
+<a href="#acai">Açaí</a>
+
+<a href="#bebidas">Bebidas</a>
+
+</nav>
+
+<section id="doces">
+
+<h2>🍰 Doces</h2>
+
+<div class="produto">
+
+<h3>Bolo de Pote</h3>
+
+<p>Sabores variados.</p>
+
+<div class="preco">R$ 12,00</div>
+
+<a class="botao" href="https://wa.me/5521974381225">
+Pedir no WhatsApp
 </a>
+
+</div>
+
+</section>
+
+<footer>
+
+AC Doce © 2026
+
+</footer>
 
 </body>
 </html>
