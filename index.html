@@ -272,6 +272,11 @@ Total: R$ 0,00
 
 <h3>📍entrega pela 99 entrega e uber entrega </h3>
 
+<input id="nome" placeholder="Seu nome">
+
+<input id="endereco" placeholder="Endereço de entrega">
+    
+
 
 <button onclick="finalizarPedido()">
 Finalizar pedido pelo WhatsApp 📲
@@ -477,14 +482,12 @@ mostrarCarrinho();
 
 function finalizarPedido(){
 
-
 let telefone="5521974381225";
 
+let nome=document.getElementById("nome").value;
 
-<input id="nome" placeholder="Seu nome">
+let endereco=document.getElementById("endereco").value;
 
-<input id="endereco" placeholder="Endereço de entrega">
-    
 
 let mensagem="Olá AC Doce! Gostaria de fazer um pedido:%0A%0A";
 
@@ -494,41 +497,29 @@ mensagem+="Nome: "+nome+"%0A";
 mensagem+="Endereço: "+endereco+"%0A%0A";
 
 
-
 let total=0;
-
 
 
 carrinho.forEach(item=>{
 
-
 mensagem += "- "+item.nome+" x"+item.quantidade+" - R$ "+
-
 (item.preco*item.quantidade).toFixed(2)+"%0A";
 
 
 total += item.preco*item.quantidade;
 
-
 });
-
 
 
 mensagem += "%0ATotal: R$ "+total.toFixed(2);
 
 
-
 window.open(
-
 "https://wa.me/"+telefone+"?text="+mensagem,
-
 "_blank"
-
 );
 
-
 }
-
 
 
 mostrarCarrinho();
