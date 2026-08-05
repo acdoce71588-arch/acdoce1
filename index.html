@@ -1,158 +1,137 @@
-<img src="logo.jpg" alt="Logo " class="logo">
 <!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>| Doces Artesanais</title>
+<title>AC Doce | Doces Artesanais</title>
 
 <style>
 
 *{
-box-sizing:border-box;
+    box-sizing:border-box;
 }
 
 body{
-margin:0;
-font-family:'Arial',sans-serif;
-background:#fff8f3;
-color:#4a2a20;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#fff8f3;
+    color:#4a2a20;
 }
 
 header{
-background:linear-gradient(135deg,#7b3f61,#c88a9b);
-color:white;
-text-align:center;
-padding:35px 20px;
+    background:linear-gradient(135deg,#F8BBD0,#FADCE6);
+    color:#7b3f61;
+    text-align:center;
+    padding:35px 20px;
 }
 
 .logo{
-width:130px;
-height:130px;
-background:white;
-border-radius:50%;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:40px;
-color:#7b3f61;
-font-weight:bold;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    background:white;
+    padding:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
 header h1{
-font-size:36px;
-margin:15px 0 5px;
+    margin:15px 0 5px;
+    font-size:36px;
 }
 
 header p{
-font-size:18px;
+    font-size:18px;
 }
-
 
 .menu{
-padding:20px;
-max-width:600px;
-margin:auto;
+    max-width:650px;
+    margin:auto;
+    padding:20px;
 }
-
 
 .titulo{
-text-align:center;
-font-size:28px;
-margin:20px;
+    text-align:center;
+    font-size:30px;
+    color:#7b3f61;
 }
-
 
 .produto{
-
-background:white;
-border-radius:20px;
-padding:20px;
-margin-bottom:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
-
 
 .produto h2{
-color:#7b3f61;
+    margin-top:0;
+    color:#7b3f61;
 }
-
 
 .preco{
-
-font-size:22px;
-font-weight:bold;
-color:#c0392b;
-
+    font-size:22px;
+    font-weight:bold;
+    color:#d35400;
 }
-
 
 button{
-
-background:#25d366;
-color:white;
-border:none;
-width:100%;
-padding:15px;
-border-radius:30px;
-font-size:18px;
-cursor:pointer;
-
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:#25D366;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
 }
 
+button:hover{
+    background:#1ea952;
+}
 
 .sobre{
-
-background:#7b3f61;
-color:white;
-padding:25px;
-text-align:center;
-
+    background:#7b3f61;
+    color:white;
+    text-align:center;
+    padding:30px;
 }
 
-
 footer{
-
-text-align:center;
-padding:20px;
-font-size:14px;
-
+    text-align:center;
+    padding:20px;
+    background:#fff;
+    color:#555;
 }
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <header>
 
+<img src="logo.jpg" alt="Logo AC Doce" class="logo">
 
-</div>
-
+<h1>AC Doce</h1>
 
 <p>Doces artesanais feitos com amor ❤️</p>
 
 </header>
 
-
-<h2 class="titulo">
-Nosso Cardápio 🍰
-</h2>
-
+<h2 class="titulo">Nosso Cardápio 🍰</h2>
 
 <div class="menu">
 
-
 <div class="produto">
-
-<h2>🍫 Pavê dois amores</h2>
+<h2>🍫 Pavê Dois Amores</h2>
 
 <p>
-Recheio cremoso de chocolate branco
-com finalização de chocolate meio amargo.
+Recheio cremoso de chocolate branco com finalização de chocolate meio amargo.
 </p>
 
 <div class="preco">
@@ -161,13 +140,11 @@ R$ 15,00
 
 <br>
 
-<button onclick="pedido('Pavê Premium')">
+<button onclick="pedido('Pavê Dois Amores')">
 Pedir agora
 </button>
 
 </div>
-
-
 
 <div class="produto">
 
@@ -183,13 +160,11 @@ R$ 6,00
 
 <br>
 
-<button onclick="pedido('Pudim')">
+<button onclick="pedido('Pudim Tradicional')">
 Pedir agora
 </button>
 
 </div>
-
-
 
 <div class="produto">
 
@@ -211,8 +186,6 @@ Pedir agora
 
 </div>
 
-
-
 <div class="produto">
 
 <h2>🍪 Cookies Artesanais</h2>
@@ -227,21 +200,17 @@ R$ 8,00
 
 <br>
 
-<button onclick="pedido('Cookies')">
+<button onclick="pedido('Cookies Artesanais')">
 Pedir agora
 </button>
 
 </div>
 
-
-
 </div>
-
-
 
 <div class="sobre">
 
-<h2>AC Doce</h2>
+<h2>Sobre a AC Doce ❤️</h2>
 
 <p>
 Pequenos momentos ficam mais doces com nossos produtos.
@@ -249,14 +218,13 @@ Pequenos momentos ficam mais doces com nossos produtos.
 
 </div>
 
-
 <footer>
 
-© AC Doce - Encomendas pelo WhatsApp
+© 2026 AC Doce<br>
+Encomendas pelo WhatsApp<br>
+📲 (21) 97438-1225
 
 </footer>
-
-
 
 <script>
 
@@ -264,16 +232,16 @@ function pedido(produto){
 
 let telefone="5521974381225";
 
-let texto="Olá AC Doce! Gostaria de pedir: "+produto;
+let texto="Olá! Gostaria de pedir: "+produto;
 
 window.open(
-"https://wa.me/"+telefone+"?text="+encodeURIComponent(texto)
+"https://wa.me/"+telefone+"?text="+encodeURIComponent(texto),
+"_blank"
 );
 
 }
 
 </script>
-
 
 </body>
 
