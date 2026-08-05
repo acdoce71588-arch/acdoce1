@@ -1,90 +1,248 @@
-index.html
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AC Doce</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AC Doce | Doces Artesanais</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#fff8f3;
+    color:#4a2a20;
+}
+
+header{
+    background:linear-gradient(135deg,#F8BBD0,#FADCE6);
+    color:#7b3f61;
+    text-align:center;
+    padding:35px 20px;
+}
+
+.logo{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    background:white;
+    padding:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+header h1{
+    margin:15px 0 5px;
+    font-size:36px;
+}
+
+header p{
+    font-size:18px;
+}
+
+.menu{
+    max-width:650px;
+    margin:auto;
+    padding:20px;
+}
+
+.titulo{
+    text-align:center;
+    font-size:30px;
+    color:#7b3f61;
+}
+
+.produto{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.produto h2{
+    margin-top:0;
+    color:#7b3f61;
+}
+
+.preco{
+    font-size:22px;
+    font-weight:bold;
+    color:#d35400;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:#25D366;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1ea952;
+}
+
+.sobre{
+    background:#7b3f61;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#fff;
+    color:#555;
+}
+
+</style>
+
 </head>
+
 <body>
-<header class="hero">
-<div class="top"></div>
-<img src="img/logo.jpg" class="logo" alt="Logo">
+
+<header>
+
+<img src="logo.jpg" alt="Logo AC Doce" class="logo">
+
 <h1>AC Doce</h1>
+
 <p>Doces artesanais feitos com amor ❤️</p>
-<input id="pesquisa" placeholder="Pesquisar..." oninput="filtrar()">
-<div class="categorias">
-<button onclick="categoria('Todos')">Todos</button>
-<button onclick="categoria('Cookies')">Cookies</button>
-<button onclick="categoria('Pavês')">Pavês</button>
-<button onclick="categoria('Pudins')">Pudins</button>
-<button onclick="categoria('Açaí')">Açaí</button>
-</div>
+
 </header>
-<main id="produtos" class="grid"></main>
-<div class="carrinho">
-<h3>🛒 Carrinho</h3>
-<div id="lista"></div>
-<p>Total: <b id="total">R$ 0,00</b></p>
-<button onclick="finalizar()">Finalizar no WhatsApp</button>
+
+<h2 class="titulo">Nosso Cardápio 🍰</h2>
+
+<div class="menu">
+
+<div class="produto">
+<h2>🍫 Pavê Dois Amores</h2>
+
+<p>
+Recheio cremoso de chocolate branco com finalização de chocolate meio amargo.
+</p>
+
+<div class="preco">
+R$ 15,00
 </div>
-<script src="script.js"></script>
+
+<br>
+
+<button onclick="pedido('Pavê Dois Amores')">
+Pedir agora
+</button>
+
+</div>
+
+<div class="produto">
+
+<h2>🍮 Pudim Tradicional</h2>
+
+<p>
+Pudim artesanal, cremoso e irresistível.
+</p>
+
+<div class="preco">
+R$ 6,00
+</div>
+
+<br>
+
+<button onclick="pedido('Pudim Tradicional')">
+Pedir agora
+</button>
+
+</div>
+
+<div class="produto">
+
+<h2>🥤 Açaí</h2>
+
+<p>
+Monte seu açaí com deliciosos complementos.
+</p>
+
+<div class="preco">
+Consultar sabores
+</div>
+
+<br>
+
+<button onclick="pedido('Açaí')">
+Pedir agora
+</button>
+
+</div>
+
+<div class="produto">
+
+<h2>🍪 Cookies Artesanais</h2>
+
+<p>
+Cookies feitos com ingredientes selecionados.
+</p>
+
+<div class="preco">
+R$ 8,00
+</div>
+
+<br>
+
+<button onclick="pedido('Cookies Artesanais')">
+Pedir agora
+</button>
+
+</div>
+
+</div>
+
+<div class="sobre">
+
+<h2>Sobre a AC Doce ❤️</h2>
+
+<p>
+Pequenos momentos ficam mais doces com nossos produtos.
+</p>
+
+</div>
+
+<footer>
+
+© 2026 AC Doce<br>
+Encomendas pelo WhatsApp<br>
+📲 (21) 97438-1225
+
+</footer>
+
+<script>
+
+function pedido(produto){
+
+let telefone="5521974381225";
+
+let texto="Olá! Gostaria de pedir: "+produto;
+
+window.open(
+"https://wa.me/"+telefone+"?text="+encodeURIComponent(texto),
+"_blank"
+);
+
+}
+
+</script>
+
 </body>
+
 </html>
-
-style.css
-
-body{margin:0;font-family:Arial;background:#fff7f9;color:#5b3b45}
-.hero{background:linear-gradient(#ffd9e8,#fff);text-align:center;padding:20px}
-.top{height:14px;background:repeating-linear-gradient(90deg,#f7bfd2 0 20px,#ffeef5 20px 40px)}
-.logo{width:120px;height:120px;border-radius:50%;background:#fff;padding:8px;box-shadow:0 4px 10px #0002}
-#pesquisa{width:min(500px,90%);padding:12px;border-radius:30px;border:1px solid #f1bfd0}
-.categorias button{margin:5px;padding:10px 16px;border:none;border-radius:20px;background:#ff8fbc;color:#fff}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:25px}
-.card{background:#fff;border-radius:18px;box-shadow:0 4px 12px #0001;padding:15px}
-.card img{width:100%;height:180px;object-fit:cover;border-radius:12px;background:#ffe6ef}
-.preco{color:#e74c7a;font-weight:bold;font-size:20px}
-.card button,.carrinho button{width:100%;padding:12px;border:none;border-radius:25px;background:#25d366;color:#fff;cursor:pointer}
-.carrinho{position:fixed;right:15px;bottom:15px;width:280px;background:#fff;border-radius:18px;padding:15px;box-shadow:0 8px 20px #0002}
-@media(max-width:700px){.carrinho{position:static;width:auto;margin:20px}}
-
-script.js
-
-const produtos=[
-{nome:'Cookie Artesanal',cat:'Cookies',preco:8,img:'img/cookie.jpg',desc:'Cookie recheado.'},
-{nome:'Pavê Dois Amores',cat:'Pavês',preco:15,img:'img/pave.jpg',desc:'Chocolate branco e meio amargo.'},
-{nome:'Pudim Tradicional',cat:'Pudins',preco:6,img:'img/pudim.jpg',desc:'Artesanal e cremoso.'},
-{nome:'Açaí',cat:'Açaí',preco:18,img:'img/acai.jpg',desc:'Monte do seu jeito.'}
-];
-let carrinho=[],catAtual='Todos';
-function render(){
-const p=document.getElementById('pesquisa').value.toLowerCase();
-let html='';
-produtos.filter(x=>(catAtual==='Todos'||x.cat===catAtual)&&x.nome.toLowerCase().includes(p)).forEach((x,i)=>{
-html+=`<div class='card'><img src='${x.img}' alt=''><h3>${x.nome}</h3><p>${x.desc}</p><div class='preco'>R$ ${x.preco.toFixed(2).replace('.',',')}</div><button onclick='add(${i})'>Adicionar</button></div>`;
-});
-document.getElementById('produtos').innerHTML=html;
-}
-function filtrar(){render()}
-function categoria(c){catAtual=c;render()}
-function add(i){carrinho.push(produtos[i]);atualiza()}
-function atualiza(){
-let t=0,s='';
-carrinho.forEach(p=>{t+=p.preco;s+=p.nome+'<br>'});
-document.getElementById('lista').innerHTML=s;
-document.getElementById('total').innerText='R$ '+t.toFixed(2).replace('.',',');
-}
-function finalizar(){
-let msg='Olá AC Doce!%0A%0APedido:%0A';
-let total=0;
-carrinho.forEach(p=>{msg+='- '+p.nome+'%0A';total+=p.preco});
-msg+='%0ATotal: R$ '+total.toFixed(2).replace('.',',');
-window.open('https://wa.me/5521974381225?text='+msg,'_blank');
-}
-render();
-
-README.txt
-
-Coloque sua logo como img/logo.jpg e as fotos como cookie.jpg, pave.jpg, pudim.jpg e acai.jpg na pasta img.
