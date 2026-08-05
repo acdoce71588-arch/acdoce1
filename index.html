@@ -132,8 +132,8 @@ margin-bottom:10px;
 }
 
 .sobre{
-background:
-color:white;
+background:linear-gradient(135deg,#F8BBD0,#FADCE6);
+color:#7b3f61;
 text-align:center;
 padding:30px;
 }
@@ -259,7 +259,7 @@ Adicionar ao carrinho 🛒
 
     <div class="carrinho">
 
-<h2>🛒 Seu Carrinho</h2>
+<h2>🛒 Meu Carrinho (<span id="contador">0</span>)</h2>
 
 <div id="listaCarrinho">
 Seu carrinho está vazio.
@@ -424,7 +424,8 @@ ${item.quantidade}
 
 
 total.innerHTML="Total: R$ "+soma.toFixed(2);
-
+    
+document.getElementById("contador").innerHTML = carrinho.length;
 
 
 }
@@ -480,11 +481,10 @@ function finalizarPedido(){
 let telefone="5521974381225";
 
 
-let nome=document.getElementById("nome").value;
+<input id="nome" placeholder="Seu nome">
 
-let endereco=document.getElementById("endereco").value;
-
-
+<input id="endereco" placeholder="Endereço de entrega">
+    
 
 let mensagem="Olá AC Doce! Gostaria de fazer um pedido:%0A%0A";
 
