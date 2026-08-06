@@ -47,11 +47,21 @@ font-size:18px;
 }
 
 .menu{
-max-width:1200px;
-margin:auto;
-padding:20px;
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
 }
 
+.produto{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
 .titulo{
 text-align:center;
 font-size:30px;
